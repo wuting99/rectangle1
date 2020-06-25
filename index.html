@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>矩形计算器</title>
+		<link href="style.css"rel="stylesheet"/>
+		</head>
+	<body>
+		<div class="main"></div>
+		<label>宽度:</label>
+		<input id="width"autofocus=""type="text"/>
+		<span>*</span>
+		<br />
+		<label>高度:</label>
+		<input id="height"type="text"/>
+		<span>*</span>
+		<br />
+		<input id="calculate"type="submit"value="计算"onclick="calculate()"/>
+		<br />
+		<label>周长:</label>
+		<input disabled="disabled"id="perimeter"type="text"/>
+		<br />
+		<label>面积:</label>
+		<input disabled="disabled"id="area"type="text"/>
+		</div>
+		<script>
+			function calculate(){
+				var w = parseFloat(document.getElementById("width").value);
+				var h = parseFloat(document.getElementById("height").value);
+				var c = "";
+				var s = "";
+				if(w<=0||h<=0){
+					alert("数值必须大于0！")
+					}
+					if(isNaN(w)||isNaN(h)){
+						alert("数据不能为空且必须填写合法数据");
+						}
+						else{
+							c=2*(w+h);
+							s=w*h;
+							}
+							document.getElementById("perimeter").value = c;
+							document.getElementById("area").value = s;
+							}
+		</script>
+		<div class="calculate"></div>
+		<div class="perimeter"></div>
+		<div class="area"></div>
+		</body>
+</html>
