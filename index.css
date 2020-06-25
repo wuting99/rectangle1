@@ -1,0 +1,15 @@
+.main{
+	text-align: center;
+	}
+	#calculate{
+		margin-right: 50px;
+		}
+		#perimeter{
+			margin-right: 12px;
+			}
+			#area{
+				margin-right: 20px;
+				}
+				span{
+					color: red;
+					}
